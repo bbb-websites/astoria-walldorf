@@ -1,14 +1,47 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="darkBlue">
+    <ion-title>FC Astroia Walldorf</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6><img class="img-heim" src="{{heimImg}}"/></ion-col>
+        <ion-col col-6><img class="img-aus" src="{{ausImg}}"/></ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="card-heim">{{heim}}</div>
+    <div class="card-vs">vs.</div>
+    <div class="card-aus">{{aus}}</div>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Spielplan
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      News
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Tabelle
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Kader
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
