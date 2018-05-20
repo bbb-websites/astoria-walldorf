@@ -7,6 +7,10 @@ page-home {
       text-align: center;
     }
 
+    ion-item{
+      text-align: center;
+    }
+
     .card-heim {
       position: absolute;
       top: 12%;
@@ -47,6 +51,10 @@ page-home {
       filter: opacity(.3);
     }
 
+  }
+
+  .spielplan-background-color{
+    background-color: color($colors, darkBlue, base);
   }
 
 }

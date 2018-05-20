@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar color="darkBlue">
+    <ion-title>Spielplan</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="list-avatar-page">
+   <ion-segment>
+     <ion-segment-button class="segment-button" value="all">
+       Nur Astoria
+    </ion-segment-button>
+    <ion-segment-button value="astoria">
+      Alle Mannschaften
+    </ion-segment-button>
+   </ion-segment>
+  <ion-list>
+    <ion-item>
+      <ion-label>Spieltag:</ion-label>
+      <ion-select [(ngModel)]="spieltag" interface=action-sheet>
+        <ion-option selected value="1">1. Spieltag</ion-option>
+        <ion-option value="2">2. Spieltag</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+   <ion-item *ngFor="let spiel of spiele" (click)="test();">
+     <ion-grid>
+      <ion-row>
+        <ion-col col-5>
+          <ion-avatar item-start class="avatar-margin">
+            <img src="{{spiel.Team1.TeamIconUrl}}">
+          </ion-avatar>
+          <h6 class="wrap">{{spiel.Team1.TeamName}}</h6>
+        </ion-col>
+        <ion-col col-5>
+          <ion-avatar item-start class="avatar-margin">
+            <img src="{{spiel.Team2.TeamIconUrl}}">
+          </ion-avatar>
+          <h6 class="wrap">{{spiel.Team2.TeamName}}</h6>
+        </ion-col>
+        <ion-col col-1 align-self-center>
+          <h2>{{spiel.MatchResults[0].PointsTeam1}}</h2>
+        </ion-col>
+        <ion-col col-1 align-self-center>
+          <h2>: {{spiel.MatchResults[0].PointsTeam2}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   </ion-item>
+   <ion-item (click)="test();">
+     <ion-grid class="no-margin">
+      <ion-row>
+        <ion-col col-5>
+          <ion-avatar item-start class="avatar-margin">
+            <img src="../assets/imgs/logo.png">
+          </ion-avatar>
+          <h6 class="wrap">Waldhof Mannheim</h6>
+        </ion-col>
+        <ion-col col-5>
+          <ion-avatar item-start class="avatar-margin">
+            <img src="../assets/imgs/logo.png">
+          </ion-avatar>
+          <h6 class="wrap">Offenbacher Kickers</h6>
+        </ion-col>
+        <ion-col col-2 align-self-center>
+          <ion-note>So, 01.12<br>14:00 Uhr</ion-note>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   </ion-item>
+ </ion-list>
+</ion-content>

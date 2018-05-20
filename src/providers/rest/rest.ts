@@ -10,15 +10,26 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class RestProvider {
 
-  apiUrl = 'https://www.openligadb.de/api/getnextmatchbyleagueteam/4246/2728';
+  nextGame = "https://www.openligadb.de/api/getnextmatchbyleagueteam/4246/2728";
+  spieltag = "https://www.openligadb.de/api/getmatchdata/rsw1819";
 
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
 
-  getUsers() {
+  getNexGame() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl).subscribe(data => {
+      this.http.get(this.nextGame).subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getSpieltag() {
+    return new Promise(resolve => {
+      this.http.get(this.spieltag).subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="darkBlue">
-    <ion-title>FC Astroia Walldorf</ion-title>
+    <ion-title>FC-Astroia Walldorf</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,20 +8,19 @@
   <ion-card>
     <ion-grid>
       <ion-row>
-        <ion-col col-6><img class="img-heim" src="{{heimImg}}"/></ion-col>
-        <ion-col col-6><img class="img-aus" src="{{ausImg}}"/></ion-col>
+        <ion-col col-6><img class="img-heim" src="{{nextGameDay?.Team1.TeamIconUrl}}"/></ion-col>
+        <ion-col col-6><img class="img-aus" src="{{nextGameDay?.Team2.TeamIconUrl}}"/></ion-col>
       </ion-row>
     </ion-grid>
-    <div class="card-heim">{{heim}}</div>
+    <div class="card-heim">{{nextGameDay?.Team1.TeamName}}</div>
     <div class="card-vs">vs.</div>
-    <div class="card-aus">{{aus}}</div>
+    <div class="card-aus">{{nextGameDay?.Team2.TeamName}}</div>
   </ion-card>
-  <ion-card>
-    <ion-card-header>
-      Spielplan
-    </ion-card-header>
-    <ion-card-content>
-    </ion-card-content>
+  <ion-card (click)="spielplan();">
+    <ion-item class="spielplan-background-color">
+      <ion-icon color="light" name="calendar" large></ion-icon>
+       <h2 ion-text color="light">Spielplan</h2>
+    </ion-item>
   </ion-card>
   <ion-card>
     <ion-card-header>

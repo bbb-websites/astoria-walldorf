@@ -1,23 +1,26 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { SpieplanPage } from '../../pages/spielplan/spielplan';
 import { RestProvider } from '../../providers/rest/rest';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-spielplan',
+  templateUrl: 'spielplan.html'
 })
-export class HomePage {
-  nextGameDay: any;
+export class SpieplanPage {
+
+  spiele : any;
+
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
     this.getSpiele();
   }
 
   getSpiele() {
-    this.restProvider.getNexGame()
+    this.restProvider.getSpieltag()
     .then(data => {
       try {
-        this.nextGameDay = data;
+        let spieltag = data;
+        console.log(spieltag);
+        this.spiele = spieltag;
       }
       catch(e) {
         console.log(e);
@@ -27,9 +30,7 @@ export class HomePage {
     });
   }
 
-  spielplan() {
-    console.log("clicked");
-    this.navCtrl.push(SpieplanPage);
+  test(){
+    console.log("list item press")
   }
-
 }
