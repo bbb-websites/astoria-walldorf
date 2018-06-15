@@ -51,9 +51,7 @@ export class NewsPage {
     .then(data => {
       try {
         let newsPicture = data;
-        console.log(newsPicture.guid.rendered);
         this.newsPicture = newsPicture;
-
       }
       catch(e) {
         console.log(e);
