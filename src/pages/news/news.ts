@@ -22,10 +22,11 @@ export class NewsPage {
       try {
         var news = data;
         console.log(news);
-        for(var i = 0; i < news.length; i++){
+        /*for(var i = 0; i < news.length; i++){
           news[i].content.rendered = news[i].content.rendered.replace(/<\/?[^>]+(>|$)/g, "");
         }
-        
+        */
+
         console.log(news);
         this.news = news;
       }
