@@ -27,21 +27,21 @@
       <ion-row>
         <ion-col col-5>
           <ion-avatar item-start class="avatar-margin">
-            <img src="{{spiel.Team1.TeamIconUrl}}">
+            <img src="{{spiel?.Team1.TeamIconUrl}}">
           </ion-avatar>
-          <h6 class="wrap">{{spiel.Team1.TeamName}}</h6>
+          <h6 class="wrap">{{spiel?.Team1.TeamName}}</h6>
         </ion-col>
         <ion-col col-5>
           <ion-avatar item-start class="avatar-margin">
-            <img src="{{spiel.Team2.TeamIconUrl}}">
+            <img src="{{spiel?.Team2.TeamIconUrl}}">
           </ion-avatar>
-          <h6 class="wrap">{{spiel.Team2.TeamName}}</h6>
+          <h6 class="wrap">{{spiel?.Team2.TeamName}}</h6>
         </ion-col>
         <ion-col col-1 align-self-center>
-          <h2>{{spiel.MatchResults[0].PointsTeam1}}</h2>
+          <h2>{{spiel?.MatchResults[0].PointsTeam1}}</h2>
         </ion-col>
         <ion-col col-1 align-self-center>
-          <h2>: {{spiel.MatchResults[0].PointsTeam2}}</h2>
+          <h2>: {{spiel?.MatchResults[0].PointsTeam2}}</h2>
         </ion-col>
       </ion-row>
     </ion-grid>

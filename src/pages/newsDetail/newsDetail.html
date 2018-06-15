@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar color="darkBlue">
+    <ion-title>
+      vom {{newsDetail?.date | date:'dd. MMMM yyyy'}}:
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+<h1>{{newsDetail?.title.rendered}}</h1>
+<p>{{newsDetail?.content.rendered}}</p>
+</ion-content>

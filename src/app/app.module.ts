@@ -9,25 +9,31 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SpieplanPage } from '../pages/spielplan/spielplan';
+import { NewsPage } from '../pages/news/news';
+import { NewsDetailPage } from '../pages/newsDetail/newsDetail';
 import { RestProvider } from '../providers/rest/rest';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    SpieplanPage
+    SpieplanPage,
+    NewsPage,
+    NewsDetailPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    HttpModule 
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    SpieplanPage
+    SpieplanPage,
+    NewsPage,
+    NewsDetailPage
   ],
   providers: [
     StatusBar,

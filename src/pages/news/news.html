@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar color="darkBlue">
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngFor="let new of news">
+    <ion-item (click)="newsDetail(new.id);">
+      <h2>{{new.title.rendered}}</h2>
+      <p>{{new.content.rendered}}</p>
+      <button ion-button clear item-end>alles</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

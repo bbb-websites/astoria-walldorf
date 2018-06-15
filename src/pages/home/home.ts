@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SpieplanPage } from '../../pages/spielplan/spielplan';
+import { NewsPage } from '../../pages/news/news';
 import { RestProvider } from '../../providers/rest/rest';
 
 @Component({
@@ -9,6 +10,7 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class HomePage {
   nextGameDay: any;
+
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
     this.getSpiele();
   }
@@ -28,8 +30,13 @@ export class HomePage {
   }
 
   spielplan() {
-    console.log("clicked");
+    console.log("Speilplan clicked");
     this.navCtrl.push(SpieplanPage);
+  }
+
+  news() {
+    console.log("News clicked");
+    this.navCtrl.push(NewsPage);
   }
 
 }
